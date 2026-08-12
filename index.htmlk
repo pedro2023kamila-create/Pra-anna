@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pra Anna ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 190, 210, .25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(255, 150, 180, .18), transparent 30%),
+        linear-gradient(135deg, #fff5f7, #ffe8ee 50%, #fff8f9);
+      color: #4a2933;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      color: rgba(213, 91, 119, .22);
+      font-size: 20px;
+      animation: subir linear infinite;
+    }
+
+    .heart:nth-child(1) {
+      left: 8%;
+      animation-duration: 12s;
+      animation-delay: 1s;
+    }
+
+    .heart:nth-child(2) {
+      left: 23%;
+      animation-duration: 16s;
+      animation-delay: 4s;
+      font-size: 28px;
+    }
+
+    .heart:nth-child(3) {
+      left: 42%;
+      animation-duration: 11s;
+      animation-delay: 2s;
+    }
+
+    .heart:nth-child(4) {
+      left: 61%;
+      animation-duration: 15s;
+      animation-delay: 6s;
+      font-size: 25px;
+    }
+
+    .heart:nth-child(5) {
+      left: 79%;
+      animation-duration: 13s;
+      animation-delay: 3s;
+      font-size: 32px;
+    }
+
+    .heart:nth-child(6) {
+      left: 92%;
+      animation-duration: 17s;
+      animation-delay: 8s;
+    }
+
+    @keyframes subir {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: .7;
+      }
+
+      100% {
+        transform: translateY(-115vh) rotate(25deg);
+        opacity: 0;
+      }
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .carta {
+      width: min(720px, 100%);
+      padding: 55px 60px;
+      background: rgba(255, 255, 255, .78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, .9);
+      border-radius: 24px;
+      box-shadow:
+        0 25px 70px rgba(137, 54, 78, .12),
+        0 5px 20px rgba(137, 54, 78, .06);
+
+      animation: aparecer 1.4s ease forwards;
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .topo {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .pequeno {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #bd7186;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(50px, 9vw, 76px);
+      font-weight: 500;
+      line-height: .9;
+      color: #9f405c;
+    }
+
+    .linha {
+      width: 60px;
+      height: 1px;
+      background: #d99aaa;
+      margin: 25px auto 0;
+    }
+
+    .conteudo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      line-height: 1.65;
+      color: #51333c;
+    }
+
+    .conteudo p {
+      margin-bottom: 20px;
+    }
+
+    .saudacao {
+      font-size: 25px;
+      font-weight: 600;
+      color: #8e3d55;
+      margin-bottom: 24px !important;
+    }
+
+    .destaque {
+      color: #a43f5d;
+      font-weight: 600;
+    }
+
+    .assinatura {
+      margin-top: 35px;
+      text-align: right;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 24px;
+      color: #8e3d55;
+    }
+
+    .coracao {
+      display: block;
+      text-align: center;
+      margin-top: 38px;
+      font-size: 27px;
+      color: #c45270;
+      animation: pulsar 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulsar {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .botao-area {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    button {
+      border: none;
+      background: #a94b66;
+      color: white;
+      padding: 13px 27px;
+      border-radius: 50px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(169, 75, 102, .22);
+      transition: .3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(169, 75, 102, .3);
+      background: #963d59;
+    }
+
+    #mensagem {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all .8s ease;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #9f405c;
+    }
+
+    #mensagem.aberta {
+      max-height: 150px;
+      opacity: 1;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 25px 14px;
+      }
+
+      .carta {
+        padding: 38px 25px;
+        border-radius: 20px;
+      }
+
+      .conteudo {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      .saudacao {
+        font-size: 23px;
+      }
+
+      .assinatura {
+        font-size: 22px;
+      }
+
+      #mensagem {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+    <div class="heart">♥</div>
+  </div>
+
+  <main>
+    <article class="carta">
+
+      <header class="topo">
+        <div class="pequeno">Uma pequena carta</div>
+        <h1>Pra Anna</h1>
+        <div class="linha"></div>
+      </header>
+
+      <section class="conteudo">
+
+        <p class="saudacao">Oi Anna,</p>
+
+        <p>
+          Eu sei que a gente se conhece há só
+          <span class="destaque">6 dias</span>.
+          É muito pouco tempo, né?
+          Mas em seis dias você conseguiu fazer coisas que eu não esperava.
+        </p>
+
+        <p>
+          Eu me apaixonei no jeito que você me chama.
+          Parece bobo, mas na sua voz meu nome fica diferente.
+          Fica mais leve, mais meu.
+        </p>
+
+        <p>
+          Me apaixonei no jeito que você me trata.
+          Com cuidado, com atenção, sem eu precisar pedir.
+          Você me faz sentir importante e acolhido.
+        </p>
+
+        <p>
+          Eu não tô tentando te apressar nem te colocar pressão nenhuma.
+          Só queria que você soubesse que em tão pouco tempo
+          <span class="destaque">
+            você virou uma das partes mais bonitas do meu dia.
+          </span>
+        </p>
+
+        <p>
+          Se você deixar, eu quero continuar te conhecendo.
+          Quero ver pra onde esse "a gente" pode ir,
+          <span class="destaque">no seu tempo.</span>
+        </p>
+
+        <p>
+          Obrigado por existir e por me tratar tão bem.
+          <br>
+          De verdade.
+        </p>
+
+        <div class="assinatura">
+          Com carinho,<br>
+          <strong>Pedro</strong>
+        </div>
+
+      </section>
+
+      <span class="coracao">♥</span>
+
+      <div class="botao-area">
+
+        <button onclick="mostrarMensagem()">
+          uma coisinha pra você
+        </button>
+
+        <div id="mensagem">
+          Quer namorar comigo? ❤️
+        </div>
+
+      </div>
+
+    </article>
+  </main>
+
+  <script>
+    function mostrarMensagem() {
+      const mensagem = document.getElementById("mensagem");
+      const botao = document.querySelector("button");
+
+      mensagem.classList.toggle("aberta");
+
+      if (mensagem.classList.contains("aberta")) {
+        botao.textContent = "❤️";
+      } else {
+        botao.textContent = "uma coisinha pra você";
+      }
+    }
+
+    document.addEventListener("click", function(e) {
+      if (e.target.tagName === "BUTTON") return;
+
+      const heart = document.createElement("div");
+
+      heart.textContent = "♥";
+      heart.style.position = "fixed";
+      heart.style.left = e.clientX + "px";
+      heart.style.top = e.clientY + "px";
+      heart.style.color = "#c45270";
+      heart.style.fontSize = "18px";
+      heart.style.pointerEvents = "none";
+      heart.style.zIndex = "999";
+      heart.style.animation = "clique 1s ease-out forwards";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 1000);
+    });
+
+    const style = document.createElement("style");
+
+    style.textContent = `
+      @keyframes clique {
+        0% {
+          transform: translate(-50%, -50%) scale(.5);
+          opacity: 1;
+        }
+
+        100% {
+          transform: translate(-50%, -130px) scale(1.5);
+          opacity: 0;
+        }
+      }
+    `;
+
+    document.head.appendChild(style);
+  </script>
+
+</body>
+      </html>
